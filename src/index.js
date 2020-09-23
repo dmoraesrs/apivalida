@@ -22,6 +22,12 @@ server.post('/validar', (req, res) => {
   return res.status(200).json(validar);
 });
 
+server.get('/teste', (req, res) => {
+  const msg = 'API VALIDA - OK';
+
+  return res.status(200).json({resposta: msg});
+});
+
 
 server.listen(3333, () => {
   console.log("API Valida Started!");
