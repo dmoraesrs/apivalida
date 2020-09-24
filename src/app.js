@@ -12,9 +12,12 @@ class App {
  }
 
  middlewares() {
-   this.server.use(cors({
-     origin: 'http://webbuild',
-   }));
+  const corsOptions = {
+    origin: '*',
+    optionsSuccessStatus: 200
+  }
+
+   this.server.use(cors(corsOptions));
    this.server.use(express.json());
  }
 
