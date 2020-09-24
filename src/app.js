@@ -13,7 +13,7 @@ class App {
 
  middlewares() {
    this.server.use(cors({
-     origin: 'http://20.190.250.167',
+     origin: 'http://webbuild',
    }));
    this.server.use(express.json());
  }
