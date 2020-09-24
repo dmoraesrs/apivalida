@@ -12,7 +12,9 @@ class App {
  }
 
  middlewares() {
-   this.server.use(cors());
+   this.server.use(cors({
+     origin: 'http://20.190.250.167',
+   }));
    this.server.use(express.json());
  }
 
